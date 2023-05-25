@@ -56,6 +56,30 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.task-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 80vw;
+}
+
+.task-card {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-left: 1rem;
+  border: 1px solid black;
+  border-radius: 12px;
+  background-color: #cccacac7;
+}
+.task-card input {
+  margin-right: 1rem;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

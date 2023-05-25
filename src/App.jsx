@@ -10,7 +10,7 @@ function App() {
   };
   return (
     <>
-      <h1>To-do app proyect</h1>
+      <h1>To-do app</h1>
       {/* component for input */}
       <AddTask onNewTask={onAddTask} />
       {/* Show the pending task => add edit pending tasks */}
