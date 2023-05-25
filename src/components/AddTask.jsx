@@ -19,6 +19,7 @@ const AddTask = ({ onNewTask }) => {
   return (
     <form onSubmit={onSubmit}>
       <input
+        className="task-inputSubmit"
         type="text"
         placeholder="Add a new task"
         value={inputValue}

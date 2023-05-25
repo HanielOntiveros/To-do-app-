@@ -4,6 +4,7 @@ import TaskCard from "./components/TaskCard";
 
 function App() {
   const [tasks, setTasks] = useState([]);
+  const [completedTask, setCompletedTask] = useState([]);
 
   const onAddTask = (newCategory) => {
     setTasks([newCategory, ...tasks]);
@@ -16,7 +17,8 @@ function App() {
       {/* Show the pending task => add edit pending tasks */}
       <section>
         <div>
-          <h2>Pending task</h2>
+          {/* Crear hook para validacion de numeros de tareas pendientes y completas y que se meustre */}
+          <h2>{`Pending task:  ${tasks.length}`}</h2>
           <TaskCard tasks={tasks} />
         </div>
       </section>
