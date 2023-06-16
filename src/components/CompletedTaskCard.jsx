@@ -1,21 +1,19 @@
-import { useEffect } from "react";
-
-export const TaskCard = ({ tasks, setTasks }) => {
-  const onTaskStat = ({ target }) => {
-    const { status } = tasks;
-    setTasks((status.value = target.checked));
-  };
-
+/* exportconst CompletedTaskCard = ({ tasks }) => {
+  const onTaskStat = ({ target }) => {};
   return (
     <div className="task-container">
       {tasks.map((task, i) => {
         return (
           <div key={i} className="task-card">
             <input type="checkbox" onChange={(event) => onTaskStat(event)} />
-            <p>{task.value}</p>
+            <p>{task}</p>
+            <button>Add Note</button>
           </div>
         );
       })}
     </div>
   );
 };
+
+export default CompletedTaskCard;
+ */

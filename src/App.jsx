@@ -1,13 +1,18 @@
 import { useState } from "react";
-import AddTask from "./components/AddTask";
-import TaskCard from "./components/TaskCard";
+import { AddTask, TaskCard } from "./components/";
 
 function App() {
   const [tasks, setTasks] = useState([]);
-  const [completedTask, setCompletedTask] = useState([]);
-
+  console.log(tasks);
   const onAddTask = (newCategory) => {
-    setTasks([newCategory, ...tasks]);
+    setTasks([
+      {
+        value: newCategory,
+        status: false,
+      },
+      ...tasks,
+    ]);
+    // setTasks([newCategory, ...tasks]);
   };
   return (
     <>
@@ -19,7 +24,7 @@ function App() {
         <div>
           {/* Crear hook para validacion de numeros de tareas pendientes y completas y que se meustre */}
           <h2>{`Pending task:  ${tasks.length}`}</h2>
-          <TaskCard tasks={tasks} />
+          <TaskCard tasks={tasks} setTasks={setTasks} />
         </div>
       </section>
 
@@ -27,6 +32,7 @@ function App() {
       <section>
         <div>
           <h2>Completed task</h2>
+          {/* <CompletedTaskCard tasks={tasks} /> */}
         </div>
       </section>
     </>

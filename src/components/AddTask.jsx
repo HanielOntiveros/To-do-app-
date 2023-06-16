@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AddTask = ({ onNewTask }) => {
+export const AddTask = ({ onNewTask }) => {
   const [inputValue, setInputValue] = useState("");
 
   const onInputChange = ({ target }) => {
@@ -28,5 +28,3 @@ const AddTask = ({ onNewTask }) => {
     </form>
   );
 };
-
-export default AddTask;
